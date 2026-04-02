@@ -2,6 +2,7 @@ import subprocess
 import sys
 from pathlib import Path
 import config
+import os
 
 def run_script(script_name):
     """Запускает указанный скрипт как модуль."""
