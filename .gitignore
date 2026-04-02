@@ -1,21 +1,54 @@
-# Виртуальные окружения Python
-voice_clone_env/
+```
+# Directories
+ai-video-dubber/
+voice_clone_EN/
 
-# Python bytecode
+# Dependencies
+node_modules/
 __pycache__/
-*.py[cod]
-*$py.class
+*.egg-info/
+.venv/
+venv/
+.env
+.env.local
+.env.*
 
-# Distribution / packaging
+# Build artifacts
 dist/
 build/
-*.egg-info/
+target/
+*.pyc
+*.class
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+*.out
 
-# IDE & OS
-.idea/
+# Editors
 .vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs and temp files
+*.log
+*.tmp
+*.temp
+
+# System files
 .DS_Store
 Thumbs.db
 
-# Environment variables (секреты!)
-.env
+# Coverage
+coverage/
+htmlcov/
+.coverage
+
+# Cache
+.mypy_cache/
+.pytest_cache/
+.gradle/
+```
