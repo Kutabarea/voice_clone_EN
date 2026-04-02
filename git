@@ -1,0 +1,14 @@
+#copy
+
+git fetch origin    
+git checkout main
+git reset --hard origin/main
+git clean -fd
+
+
+
+#push
+
+git add .
+git commit -m ""
+git push
