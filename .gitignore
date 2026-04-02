@@ -1,22 +1,47 @@
-# Виртуальные окружения Python
-voice_clone_env/
-
-# Python bytecode
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
-
-# Distribution / packaging
-dist/
+*.so
+.Python
 build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
 *.egg-info/
+.installed.cfg
+*.egg
 
-# IDE & OS
-.idea/
+# Virtual Environment
+venv/
+env/
+ENV/
+voice_clone_env/
+
+# IDE
 .vscode/
-.DS_Store
-Thumbs.db
+.idea/
+*.swp
+*.swo
 
-# Environment variables (секреты!)
-.env
+# Project Specific
+assets/*.mp4
+assets/*.wav
+assets/*.mov
+outputs/*
+temp/*
+!assets/.gitkeep
+!outputs/.gitkeep
+!temp/.gitkeep
 git
+
+# Checkpoints (модели большие, лучше качать отдельно или через git-lfs)
+checkpoints/*.pth

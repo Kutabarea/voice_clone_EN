@@ -1,0 +1,24 @@
+# Core AI Models
+TTS==0.21.3
+openai-whisper==20231117
+
+# Translation & NLP
+deep-translator==1.11.4
+nltk==3.8.1
+whisper==1.1.10
+# Audio Processing
+pydub==0.25.1
+noisereduce==3.0.0
+librosa==0.10.1
+soundfile==0.12.1
+
+# Video Processing
+opencv-python==4.9.0.80
+ffmpeg-python==0.2.0
+
+# Utilities
+torch==2.1.2 --index-url https://download.pytorch.org/whl/cu118
+torchaudio==2.1.2 --index-url https://download.pytorch.org/whl/cu118
+numpy==1.24.3
+tqdm==4.66.1
+python-dotenv==1.0.0
