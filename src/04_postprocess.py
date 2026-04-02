@@ -3,7 +3,9 @@ import json
 from pathlib import Path
 import config
 import os
-
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 def assemble_audio(transcript_json, segments_dir, output_path):
     """Собирает аудиофайлы в один трек с учетом таймингов."""
     print("🧩 Сборка финального аудиотрека...")

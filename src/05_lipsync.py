@@ -1,6 +1,9 @@
 import subprocess
 import config
 import os
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 def run_lipsync(video_path, audio_path, output_path):
     """Запускает Wav2Lip для синхронизации губ."""

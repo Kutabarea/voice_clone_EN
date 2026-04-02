@@ -3,7 +3,9 @@ from deep_translator import GoogleTranslator
 from pathlib import Path
 import config
 import time
-
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 def translate_text(text, source, target):
     """Переводит текст с сохранением структуры."""
     translator = GoogleTranslator(source=source, target=target)

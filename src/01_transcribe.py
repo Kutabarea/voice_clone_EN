@@ -5,7 +5,9 @@ import subprocess
 from pathlib import Path
 import json
 import config
-
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 def extract_audio(video_path, output_audio_path):
     """Извлекает аудио из видео файла."""
     print(f"🎬 Извлечение аудио из {video_path}...")
