@@ -7,7 +7,11 @@ import json
 import config
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# Добавляем корень проекта в путь, если скрипт запускается напрямую
+if __name__ == "__main__":
+    sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+import config
 def extract_audio(video_path, output_audio_path):
     """Извлекает аудио из видео файла."""
     print(f"🎬 Извлечение аудио из {video_path}...")

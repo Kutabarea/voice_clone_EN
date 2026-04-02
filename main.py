@@ -4,12 +4,21 @@ from pathlib import Path
 import config
 
 def run_script(script_name):
-    """Запускает указанный скрипт."""
-    script_path = config.BASE_DIR / "src" / script_name
+    """Запускает указанный скрипт как модуль."""
+    script_module = script_name.replace(".py", "")
     print(f"\n▶️ Запуск {script_name}...")
     
     try:
-        subprocess.run([sys.executable, str(script_path)], check=True)
+        # Запускаем как модуль из текущей директории, добавляя src в путь
+        env = os.environ.copy()
+        # Убеждаемся, что корень проекта в пути
+        root_dir = str(config.BASE_DIR)
+        if 'PYTHONPATH' in env:
+            env['PYTHONPATH'] = root_dir + os.pathsep + env['PYTHONPATH']
+        else:
+            env['PYTHONPATH'] = root_dir
+            
+        subprocess.run([sys.executable, "-m", f"src.{script_module}"], check=True, env=env)
         print(f"✅ {script_name} завершен успешно.")
     except subprocess.CalledProcessError as e:
         print(f"❌ Ошибка выполнения {script_name}: {e}")

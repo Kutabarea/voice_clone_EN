@@ -7,7 +7,11 @@ import config
 from pydub import AudioSegment
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# Добавляем корень проекта в путь, если скрипт запускается напрямую
+if __name__ == "__main__":
+    sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+import config
 def generate_cloned_audio(transcript_json, output_dir):
     """Генерирует аудио для каждой фразы с клонированием голоса."""
     print("🤖 Инициализация модели XTTS v2...")

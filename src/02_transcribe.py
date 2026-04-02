@@ -5,7 +5,11 @@ import config
 import time
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# Добавляем корень проекта в путь, если скрипт запускается напрямую
+if __name__ == "__main__":
+    sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+import config
 def translate_text(text, source, target):
     """Переводит текст с сохранением структуры."""
     translator = GoogleTranslator(source=source, target=target)

@@ -3,7 +3,11 @@ import config
 import os
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# Добавляем корень проекта в путь, если скрипт запускается напрямую
+if __name__ == "__main__":
+    sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+import config
 
 def run_lipsync(video_path, audio_path, output_path):
     """Запускает Wav2Lip для синхронизации губ."""
